@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"> 
+	 <link rel="stylesheet" href="VK/slimbox/slimbox2.css">
+</head>
+<style type="text/css">
+		html,
+		body{
+			font-family:'Roboto',sans-serif;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: #222;
+		}
+		.logo{
+			 color:#EFEFEF;
+		}
+		.header{
+
+			display: flex;
+			justify-content: space-between;
+			max-width: 900px;
+			padding:15px;
+			margin: 10px auto;
+		}
+		.but{
+
+			transition: all 0.2s ease;
+			background-color: Transparent;
+		    background-repeat:no-repeat;
+		    cursor:pointer;
+		    overflow: hidden;
+		    outline:none;
+		 	color:white;
+		}
+		.b-main{
+			
+			color: white;
+			border:  1px solid white;
+		}
+		.b-main:hover{
+			background-color: white;
+			color: #76BF8A;
+			border:  1px solid white;
+		}
+		.b-main:active{
+			transform: scale(0.9);
+		}
+</style>
+<body>
+
+<div class="header">
+	<div class="logo">
+		logo
+	</div>	
+	<div>
+		<button class="but b-main" style="width: 100px; height: 25px; border-radius:30px;" onclick="location.href = 'index.html' " >На главную</button>
+	</div>
+</div>
+
+<div class="gallery">
+	<h1 style="font-size: 48px; color:#EFEFEF; text-align: center;">Галерея гостевого дома</h1>
+	<div class="vk"  data-link="https://m.vk.com/album511145124_262033681"  data-limit="150" data-width="150"></div>
+</div>
+
+
+
+
+<!-- ...................................... -->
+<script type="text/javascript" src="js/upl.js"></script>
+<script src="gal/lib/jquery-2.1.0.min.js"></script>
+	<script src="VK/js/jquery.slimbox2.js"></script>
+	<script src="VK/js/jquery.embedvkgallery.js?22112018"></script>
+	<script>
+	    (function($) {
+	        $(function() {
+	           $('.vk').EmbedVkGallery();
+	        });
+	    })(jQuery);
+	</script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"> 
+
+	<script type="text/javascript" src="js/readfull.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,400&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="js/slider/slick/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="js/slider/slick/slick/slick-theme.css"/>
+
+	 <link rel="stylesheet" href="VK/slimbox/slimbox2.css">
+
+	<script src="gal/lib/jquery-2.1.0.min.js"></script>
+
+
+
+		<script>
+			$(document).ready(function() {
+			  $("form.scroll").click(function() {
+			    var elementClick = $(this).attr("action")
+			    var destination = $(elementClick).offset().top;
+			    jQuery("html:not(:animated),body:not(:animated)").animate({
+			      scrollTop: destination
+			    }, 800);
+			    return false;
+			  });
+			});
+		</script>
+
+		<script type='text/javascript' src='Gallery/package/unitegallery/js/unitegallery.min.js'></script>	
+		<link rel='stylesheet' href='Gallery/package/unitegallery/css/unite-gallery.css' type='text/css' />
+		<script type='text/javascript' src='Gallery/package/unitegallery/themes/default/ug-theme-default.js'></script>
+		<link rel='stylesheet'href='Gallery/package/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+
+		<script type="text/javascript">
+
+			jQuery(document).ready(function(){
+
+			jQuery("#gallery").unitegallery();
+
+		});
+		
+		</script>
+
+</head>
+	<style>
+		html,
+		body{
+			font-family:'Roboto',sans-serif;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: #EFEFEF;
+		}
+		.wrapper{
+			background-color: white;
+		}
+		.head{
+			grid-area: head;
+			display: grid;
+			grid-template-columns: repeat(2,50%);
+			padding:27px;
+			width: 88%;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		.label{
+			grid-area: label;
+			width: 60%;
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			padding-top:50px;
+		}
+
+		.cont-head{
+			min-height: 100%;
+			display: grid;
+			grid-template-areas: "head" "label";
+			grid-template-rows: 100px 1fr;
+			background-image: url(img/bg/bg1.jpg);
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;  
+			margin-bottom: 90px; 	
+		}
+
+		.cont-head,.cont-review,.cont-label,.cont-about, .cont-need{
+
+		}
+		.icn{
+			text-align: center;
+		}
+
+		.icn img,
+		.soc-icon img{
+			height: 35px;
+			transition: all 0.2s ease;
+			background-color: #76BF8A;
+			padding:3px;
+			border-radius: 50px;
+			margin: 5px;
+			filter: brightness(85%);
+		}
+		.icn img:hover,
+		.soc-icon img:hover{	
+			cursor: pointer;
+			filter: brightness(110%);
+		}
+		.icn img:active,
+		.soc-icon img:active{	
+			transform: scale(.7);
+		}
+		.but {
+			transition: all 0.2s ease;
+			background-color: Transparent;
+		    background-repeat:no-repeat;
+		    cursor:pointer;
+		    overflow: hidden;
+		    outline:none;
+		 	color:white;
+		}
+		#hbut{
+			color:white;
+		}
+		#hbut:hover{
+			border: 1px solid white;
+			color: #76BF8A;	
+			background-color: white;
+		}
+		#lbut{
+			background-color: #76BF8A;
+			color: white;
+			border:  1px solid #76BF8A;
+
+		}
+
+		#lbut:hover {
+			border: 1px solid white;
+			color: #76BF8A;	
+			background-color: white;
+			cursor: pointer;
+		}
+		#lbut:active{
+			transform: scale(.9);
+		}
+		.border-box{
+			color: white;
+			text-align: center;
+		}
+		.need-box{
+			text-align: center;
+			display: grid;
+			margin: 0 auto;
+			grid-template-columns: repeat(3,1fr);
+			width: 100%;
+			max-width: 1000px;
+		}
+		.icon-box img{
+			width: 100px;
+			height: 100px;
+		}
+		.n-title{
+			color:#1E1E1E;
+			padding: 15px;
+			font-size: 22px;
+		}
+		.disc-box{
+			color:#1E1E1E;
+			font-size: 15px;
+			max-width: 250px;	
+			margin: 0 auto;
+		}
+		#bneed{
+			border: 1px solid #76BF8A;
+			color:white;	
+			background-color:#76BF8A;
+			transition: ease 0.2 all;
+		}
+		#bneed:hover{
+			opacity: 0.7; 
+		}
+		.need-item{
+			margin: 0 auto; line-height:1.3;color:rgb(60, 62, 63); 
+			font-family: 'PT Sans', sans-serif;
+		}
+		.butclass{
+			padding-left: 65px;
+			padding-top:85px; 
+			position: absolute;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		#butback{
+			opacity: 0;
+			color: white;
+		}
+		a{
+		  color: #000 ;
+		  text-decoration: none;
+		}
+
+		@media (max-width: 955px){
+			/*.need-box{
+				text-align: center;
+				display: grid;
+				margin: 0 auto;
+				grid-template: repeat(2, 1fr)/ repeat(2,50%);
+				width: 100%;
+				max-width: 1200px;
+			}*/
+			.shab-items{
+				margin: 0 auto;
+				display:grid;
+				grid-gap: 1em;
+				grid-template:repeat(3, 1fr) / repeat(2, 1fr);
+				padding-top:50px;
+				max-width: 590px;
+			}	
+		}
+
+		.review-box{
+			margin: 0 auto;
+			font-family: 'PT Sans', sans-serif;
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+    		align-content: center; 
+		}
+		.box1{
+		background-color: #f3e4b2;
+		}
+		.box2{
+			background-color: #7f6991;
+		}
+		.box3{
+			background-color: #e7e8e3;	
+		}
+		.box4{
+			background-color:#7ddbd4;
+		}
+		.rw-avatar img{
+
+			width: 250px;
+			height: 240px;
+		}
+		.tt{
+			margin: 0 auto;
+			font-size: 20px;
+			line-height:1.3;
+			color:rgb(60, 62, 63); 
+			font-family: 'PT Sans', sans-serif;
+			display: flex;
+			padding-top:50px;
+			max-width: 1000px;
+		}
+		.read {
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.read:hover{
+			opacity: 0.8;
+		}
+		.rev-slider{
+			margin: 50px auto;
+			max-width: 2000px;
+		}
+		.review{	
+			padding-bottom: 50px;	
+		}
+		.kch{
+			font-size: 40px;
+			font-weight: bold;
+		
+		}
+		.zag2{
+			display: flex;
+			align-items: flex-end;
+		}
+		.revtxt{
+			font-style: italic;
+			padding-top:50px;
+			padding-left:40px;
+			padding-bottom: 30px;
+			padding-right:40px;
+
+			max-width: 500px;
+
+		}
+		.ic-stars{
+			text-align: center;
+			margin: 0 auto;
+			display: flex;
+			max-width: 200px;
+			padding-bottom: 50px;
+		}
+		.ic-stars img{
+				
+			width: 20px;height: 20px;
+		}
+		.nick-name{
+			font-weight: bold;
+			text-align: center;
+		}
+		.cont-footer{
+			height: 550px;	
+		}
+		.conts{
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			margin: 0 auto;
+			border-radius: 5px;
+			padding-top: 40px;
+			padding-bottom: 10px;
+			padding-left:30px;
+			padding-right:30px;
+			width: 30%;
+			max-width: 370px;
+			position: relative;
+			top: -100px;
+			font-size: 16px;
+			text-align: center;
+			background-color: white;
+			opacity: 1;
+			transition: all 0.3s all;
+		}
+		.soc-icon{
+			display: flex;
+			margin: 0 auto;
+			justify-content: space-between;
+			max-width: 200px;
+		}
+		.map{
+			position: relative;
+
+		}
+		.map:focus{
+			z-index: 3;
+		}
+		.info-cont{
+			opacity: 1;
+
+		}
+		.map:active ~ .conts{
+			opacity: 0.2;
+		}
+
+		.gal-block{
+			max-width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+			
+		}
+		#gallery{
+			margin: 0 auto;text-align: center;
+		}
+		
+	</style>
+	
+<body>
+	<div class="wrapper">
+
+		<div class="cont-head">
+			<div class="head">
+				<div class="logo" style="width: 124px; height: 28px; padding-top:15px; cursor: pointer; color: white">
+					<span style="">
+						logo
+					</span>
+				</div>
+			<div class="icn"style="text-align: right;">
+				<!-- <input type="button" class="but" id="hbut" style="
+				width: 152px; height: 42px;
+				font-size: 16px;
+				border-radius:20px;
+				" 
+				name="" value="Начать сейчас"> -->
+				<!-- <img src="img/icons/vk.png"> -->
+				<a target="_blank" href="https://vk.com/starovolzhsky_guesthouse"><img src="img/icons/soc/vk.png" href=></a>
+
+				<a target="_blank" href="https://www.instagram.com/starovolzhsky_guesthouse/"><img src="img/icons/soc/inst.png"></a>
+				<a  target="_blank" href="#"><img src="img/icons/soc/fb.png"></a>
+
+				
+			<!-- 	<img src="img/icons/fb.png"> -->
+			</div>
+			</div>
+			<div class="label" style="padding-bottom: 350px;padding-top: 100px;">
+			
+			<div class="label-border" >
+				<div class="border-box">
+					<img  style="width: 20%;" src="img/house/roof.png">
+				</div>
+				<div class="splash" style=""><img src="img/house/splash.png" style="width: 32%; height: 1%;"></div>
+
+				<div style="font-size: 64px; color: white;  margin-left: 30px;margin-right: 40px; font-weight: bold;text-align: center; ">
+					Время, проведенное на рыбалке, в счет жизни не идет.
+				</div>
+
+				<div style="padding:100px;" class="border-but">
+
+<!-- 
+						<input type="button" class="but scroll" id="lbut"style="width: 192px; height: 48px;font-size: 20px; 
+						border-radius:30px;  "  onclick="location.href='#need;"value="Подробнее"> -->
+						<form action="#need" class="but scroll" style="width: 192px; margin: 0 auto;">
+							<button style="width: 192px; height: 48px;font-size: 20px; 
+							border-radius:30px; "id="lbut" >Подробнее</button>
+						</form>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+
+		<div class="cont-need" id="need">
+			<h1 style="font-size: 48px; color:#1E1E1E; text-align: center; margin: 70px;">Почему мы?</h1>
+			<div class="need-box">
+				<div class="need-item">
+					<div class="icon-box">
+						<img src="img/icons/house.png">
+					</div>
+					<div class="n-title">
+						Комфортный отдых
+					</div>
+					<div class="disc-box">
+						Наши номера отлично подойдут для комфортного времяпровождения.
+					</div>
+				</div class="need-item">
+
+				<div class="need-item">
+					<div class="icon-box">
+						<img src="img/icons/coins.png">
+					</div>
+					<div class="n-title">
+						Адекватные цены
+					</div>
+					<div class="disc-box">
+						Мы не берем дополнительной платы
+					</div>
+				</div class="need-item">
+
+				<div class="need-item">
+					<div class="icon-box">
+						<img src="img/icons/like.png">
+					</div>
+					<div class="n-title">
+						Рыбалка
+					</div>
+					<div class="disc-box">
+						Всегда незабываемая рыбалка, охота и дайвинг с отличными трофеями.
+					</div>
+				</div>
+				
+			</div>
+			<div style="padding-top: 70px; text-align: center; ">
+					<input type="button" class="but" id="bneed" style="width: 192px; height: 54px;font-size: 20px; 
+					border-radius:30px;" value="Начать сейчас">
+			</div>
+		</div>
+
+		<div class="cont-about"style=" padding-top:120px; padding-bottom: 100px; color:#1E1E1E;" >
+			<h1 style="font-size: 48px;  text-align: center; margin: 70px;border-top: 1px solid #D7D5D5;
+				max-width: 500px; margin: 0 auto;text-align: center; padding: 50px;">О нас...</h1>
+
+			<div style="max-width: 900px; margin: 0 auto; font-size: 18px;line-height:1.3;color:rgb(60, 62, 63); 
+			font-family: 'PT Sans', sans-serif;">
+				<p>
+				Небольшая, но уютная территория, готовая принять до 16 человек, обеспечить <b>всем</b> необходимым (кроме питания) для полноценного отдыха и рыбалки. Мы <b>находимся</b> в 70 км ниже Астрахани, в Икрянинском районе, п. Старо-Волжский.</p> 
+				<p>К <b>Вашим</b> услугам 4 домика, в каждом 2 спальни по 2 кровати, небольшие кухня и гостиная, санузел, веранда. Телевизор, стол, диван,  холодильник, кондиционер, морозильный ларь, посуда. Мангалы, печь для казана, коптильня. С <b>собой</b> иметь снасти, наживку, продукты, напитки – все остальное мы <b>Вам</b> предоставим. Если что-то забыли из выше перечисленного – то же предоставим. </p>
+				<p>
+				Главная изюминка – <b>береговая зона</b>. До воды (в зависимости от уровня) от 3 до 30 метров, куда <b>Вы</b> дойдете по пирсу. Пирс переходит в пляж над водой (4х30 м). На пляже навесы, столики, лавки. С пляжа по трапам спускаетесь на понтоны – и все, <b>Вы</b> на рыбалке. На понтонах стаканы для удочек, столики, в том числе для чистки рыбы, проведена вода. Пляж и понтоны освещены. Комфортно <b>рыбачить</b> 24 часа в сутки (кто встает на час раньше – 25 часов).</p>
+				<p>
+				Если надоедает ленивая рыбалка (видел и таких) – можно арендовать весельную <b>лодку</b>, можно с мотором. Для самых упертых – <b>егерьская</b> рыбалка.</p>
+				<p>
+				Если не брать во внимание флот – <b>Вы</b> платите 1 раз за проживание. Странно видеть знакомые бударки со знакомых баз, которые встают с гостями неподалеку для ловли воблы. Странно звучит «Экскурсии на лотосные  поля» - тут куда ни плюнь, <b>попадешь в лотос.</b></p>
+				<div style="padding-top: 40px; text-align: center;">
+					•••
+				</div>
+				<img src="img/pirs.jpg" style="display: block;
+				max-width: 100%;
+				height: auto;">
+			</div>
+		</div>
+
+		<div class="cont-review"style=" color:#1E1E1E;">
+			<div class="review">
+
+				<h1 style="font-size: 48px;text-align:center; padding-top:50px;
+				max-width: 800px; margin: 0 auto;text-align: center; border-top:1px solid #D7D5D5;"> А что думают наши клиенты?</h1>
+				<h3 style="text-align: center;">Отзывы клиентов - это наша гарантия качества и надёжности. </h3>
+
+				<div class="rev-slider">
+					<div class="review-box box3" >
+						<div class="rw-avatar">
+							<img src="img/reviews/man-3.png">
+							<div class="nick-name "style="color: #494846;">
+								Bofa
+							</div>
+						</div>
+						
+						
+						<div class="rw-text t3">
+							<div class="tt" >
+							<div class="kch zag">┎</div>
+							<div class="revtxt">
+									Были у Андрея в октябре, гостевой дом новый номера уютные и чистые, готовили сами посуда вся новая в ассортименте. Место тихое и спокойное никто не мешал. Рыбу ловили в основном с пантона, ловилось все начиная от сазана и до бели. Клев был как с пулемета, приходилось ловить на...
+									<span id="razv3" onclick='wrt3(" одну удочку. Ходили на лодке к Вышке, наловили окуней по 400-500 грамм штук тридцать, мелких отпускали. Лично мне понравилось ловить с пантона никуда не надо ехать стол рядом друзья за столом рядом. Андрей спасибо за прием привет от Игоря.");'> <b class="read"><i>Читать далее</i></b>
+								 </span>  <span id="sver3" class="read" onclick='wrt3("");'></span>
+							
+								</div>
+
+							<div class="kch zag2" style="">┙</div>
+							</div>
+							<div class="ic-stars">
+									<img src="img/icons/rev/star.png">
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">		
+							</div>
+						</div>
+						</div>
+					
+
+					<div class="review-box box2" >
+						<div class="rw-text t2" ">
+								<div class="tt"style="color:#e7e8e3;">
+								<div class="kch zag">┎</div>
+								<div class="revtxt" >
+								Всем привет!Отдыхали на этой замечательной базе с 14 по 20 апреля. Отдых удался на 100%,Нам очень все понравилось,как по быту,так и по рыбалке. Хозяева очень приятные люди,готовые всегда прийти на помощь по любой проблеме.Спасибо Вам, Андрей и Наталья!...
+			 						<span id="razv" onclick='wrt("   то нашей целью являлась вобла и мы ее наловились вдоволь,аж до сих пор приятно болят руки).В прилове также были густера,карась,окунь,лещ. Ловили преимущественно на фидер,клёв как из пулемета,в основном фидер в руках держали, т.к. сразу же происходила поклёвка,на поплавок тоже ловится. Насадка червь и кукуруза.Настроение испортилось только в последний день,уж очень не хотелось уезжать.В следующем году планируем опять приехать в этот же период(лишь бы свободные места были)в гости к Андрею и Наталье и посетить эти чудесные места!");'> <b class="read"><i>Читать далее</i></b>
+									 </span>  <span id="sver" class="read" onclick='wrt("");'></span>
+								
+							</div>
+							<div class="kch zag2" style="">┙</div>
+							</div>
+							<div class="ic-stars">
+										<img src="img/icons/rev/star.png">
+										<img src="img/icons/rev/star.png">	
+										<img src="img/icons/rev/star.png">	
+										<img src="img/icons/rev/star.png">	
+										<img src="img/icons/rev/star.png">		
+							</div>
+						</div>
+						<div class="rw-avatar">
+							<img src="img/reviews/man.png">
+							<div class="nick-name" style="color:#e7e8e3;">
+								Максимчик
+							</div>
+						</div>
+					</div>
+					<div class="review-box box1" >
+						<div class="rw-avatar">
+							<img src="img/reviews/man-2.png">
+							<div class="nick-name">
+							Hemming
+							</div>
+						</div>
+						<div class="rw-text t1">
+							<div class="tt">
+								<div class="kch zag">┎</div>
+								<div class="revtxt">
+								На территории чисто. В домике порядок и комфорт. 
+								Цена - адекватная, даже несколько ниже чем у других. Хозяева - замечательные люди. 
+								По рыбалке - для карпятников настоящий рай!
+								Никуда и ехать не нужно, хотя для этого все есть, 
+								и лодки и моторы. Сазан клюет прямо с пантона.
+								Всем рекомендую!
+							
+								</div>
+								<div class="kch zag2" style="">┙</div>
+							</div>
+								<div class="ic-stars">
+									<img src="img/icons/rev/star.png">
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">		
+								</div>
+						</div>
+					</div>	
+						<div class="review-box box4" >
+						
+							<div class="rw-text t4">
+							<div class="tt" style="color:#543e36;">
+								<div class="kch zag">┎</div>
+								
+								<div class="revtxt">
+							Отдыхали неделю в начале сентября. 
+							Добираться до гостевого дома очень удобно, 15 минут от парома, и ты на базе. Первоклассные номера, мы с женой любим отдыхать в Европе. Так вот, по комфорту номера на базе как минимум ей не уступают,а по совокупности всех... 
+							<span id="razv2" onclick='wrt2("  факторов Европа нервно курит в сторонке.Основная фишка - открываешь калитку и оказываешься на понтоне. Хоть загорай и купайся, хоть рыбачь. Понтон для этого специально оборудован. Здесь же можно почистить и разделать рыбу. Что мы и делали. Очень удобно, и можно много заморозить, чтобы увезти с собой. Вид с понтона великолепный. В 10 минутах на веслах лотосы, красоты неописуемой. Что касается рыбалки. Один человек, ни разу в жизни не бравший в рукиудочку или спиннинг, за пол-дня может спокойно наловить рыбы, чтобы питаться ею несколько дней. Убедился на примересвоей сестры. Рыба всякая. Ходили на лодке на Раскаты. Впечатлений на всю жизнь, хоть кино снимай. На базе три лодки. Бери в аренду лодку, мотор, и отрывайся по полной. В общем отдых на базе превзошел мои самые смелые ожидания.Принимают гостей Андрей и Наташа. Ну, что сказать...У меня полное впечатление, что отдыхал я у близких, и причем любимыхродственников. Андрей, Наташа, спасибо!!!Общая оценка: Превосходно! Выше ожиданий.И сам еще раз приеду, и всем советуюДа, рядом с базой растет лаванда! Прямо Италия, блин, какая то. Привезете женам и мамам, они будут в восторге!");'> 
+								<b class="read"><i>Читать далее</i></b>
+							</span> <span id="sver2" onclick='wrt2("");'></span>
+							</div>
+								<div class="kch zag2" style="">┙</div>
+							</div>
+								<div class="ic-stars">
+									<img src="img/icons/rev/star.png">
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">	
+									<img src="img/icons/rev/star.png">		
+								</div>
+							</div>
+						<div class="rw-avatar" style="color:#543e36;">
+						<img src="img/reviews/boy-1.png">
+							<div class="nick-name">
+								Igor_E_N
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>		
+		</div>
+
+		<div class="cont-shab" style="" >
+			<div class="shab-title" style="max-width: 800px; margin: 0 auto;text-align: center;">
+				<h1 style="font-size: 48px; color:#1E1E1E; padding-top: 50px;">Окунитесь в атмосферу рыбалки</h1>
+				<h3 style="color:#1E1E1E; max-width: 600px;margin:0 auto; text-align: center; padding-bottom:30px;">Фотографии являются нашей историей и памятью.</h3>
+			</div>
+
+			<div class="gal-block"> 
+ 
+						<div  class="vk"  style=" padding-bottom:150px;" data-link="https://m.vk.com/album511145124_262033681"  data-limit="6" data-width="150">
+						</div>
+
+						
+			</div>	
+			<div style="margin: 50px auto; text-align: center; max-width: 230px; ">
+				<input type="button"onclick="location.href = 'gallery.html' " class="but" id="bneed" style="width: 230px; height: 43px;font-size: 18px; 
+						border-radius:30px;" value="Посмотреть больше">
+			</div>	
+						
+							
+					
+		<div class="cont-footer" style="background-color: #EFEFEF;
+			text-align: center; box-shadow: 
+			inset 0 5px 5px -5px black;">
+			
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5556.874080871414!2d47.6918746194708!3d45.86256512555935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41abe3e89acd9e4f%3A0x615410dc7b1a8695!2z0KHRgtCw0YDQvi3QktC-0LvQttGB0LrQuNC5LCDQkNGB0YLRgNCw0YXQsNC90YHQutCw0Y8g0L7QsdC7LiwgNDE2MzYz!5e0!3m2!1sru!2sru!4v1559203212772!5m2!1sru!2sru" style="width: 100%; max-width: 2000px;"width="2000" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="conts">
+				<div class="info-cont">
+					<div class="map-cont" style="font-size: 20px;color: #333333;">Наши контакты</div><p></p>
+				<div class="map-address" style="color: #696969;">п.Старо-Волжский, ул.Набережная</div>
+				<div class="map-phone" style="color: #696969;">+7(927)-570-62-23</div>
+				<p></p><div class="map-time" style="color: #333333;">Мы работаем: с  00:00-23:59 (пн-пт)</div><p></p>
+				<div class="soc-icon">
+					<a target="_blank" href="https://vk.com/starovolzhsky_guesthouse"><img src="img/icons/soc/vk.png" href=></a>
+					<a target="_blank" href="https://www.instagram.com/starovolzhsky_guesthouse/"><img src="img/icons/soc/inst.png"></a>
+					<a  target="_blank" href="#"><img src="img/icons/soc/fb.png"></a>
+				</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+	
+
+	<script type="text/javascript" src="js/upl.js"></script>
+
+	
+	<script src="VK/js/jquery.slimbox2.js"></script>
+
+	<script src="VK/js/jquery.embedvkgallery.js?22112018"></script>
+
+	<script>
+	    (function($) {
+	        $(function() {
+	           $('.vk').EmbedVkGallery();
+	        });
+	    })(jQuery);
+</script>
+<script src="js/carousel.js"></script>
+</body>
+</html>
