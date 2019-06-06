@@ -13,17 +13,23 @@
 			margin: 0;
 			padding: 0;
 			background-color: #222;
+			
+
 		}
 		.logo{
-			 color:#EFEFEF;
+			position: relative;
+			top: -10px;
+			color:#EFEFEF;
+
 		}
 		.header{
 
 			display: flex;
 			justify-content: space-between;
 			max-width: 900px;
-			padding:15px;
-			margin: 10px auto;
+			padding:35px;
+			margin: 0 auto;
+		
 		}
 		.but{
 
@@ -48,29 +54,61 @@
 		.b-main:active{
 			transform: scale(0.9);
 		}
+		.logo{
+			text-align: center;
+			width: 150px;
+
+		}
+		.logo img{
+
+		}
+		.cont-head{
+			background-image: url("img/bg/bg2.jpg");
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;  
+		}
+		.gallery{
+
+		}
+		.title{
+			text-align: center;
+			padding:50px;
+
+		}
+		.house img{
+			width: 100px;
+			height: 30px;
+		}
 </style>
 <body>
-
-<div class="header">
+<div class="cont-head">
+	<div class="header">
 	<div class="logo">
-		logo
+		<div class="house"><img  style="" src="img/house/roof.png"></div>
+			«Староволжский»
+			гостевой дом
+		<div class="splash" style=""><img src="img/house/splash.png" style="width: 52%; height: 1%;"></div>
 	</div>	
 	<div>
 		<button class="but b-main" style="width: 100px; height: 25px; border-radius:30px;" onclick="location.href = 'index.html' " >На главную</button>
 	</div>
 </div>
+<div class="title">	<span style="font-size: 48px; color:#EFEFEF; text-align: center; font-weight: bold;">Галерея гостевого дома</span></div>
+</div>
 
 <div class="gallery">
-	<h1 style="font-size: 48px; color:#EFEFEF; text-align: center;">Галерея гостевого дома</h1>
-	<div class="vk"  data-link="https://m.vk.com/album511145124_262033681"  data-limit="150" data-width="150"></div>
+
+	<div class="vk"  data-link="https://m.vk.com/album492237896_265237766"  data-limit="150" data-width="150"></div>
 </div>
 
 
 
 
 <!-- ...................................... -->
-<script type="text/javascript" src="js/upl.js"></script>
 <script src="gal/lib/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/upl.js"></script>
+
 	<script src="VK/js/jquery.slimbox2.js"></script>
 	<script src="VK/js/jquery.embedvkgallery.js?22112018"></script>
 	<script>
@@ -80,5 +118,6 @@
 	        });
 	    })(jQuery);
 	</script>
+
 </body>
 </html>

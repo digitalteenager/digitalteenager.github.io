@@ -75,6 +75,7 @@
 			margin: 0 auto;
 			text-align: center;
 			padding-top:50px;
+
 		}
 
 		.cont-head{
@@ -82,11 +83,13 @@
 			display: grid;
 			grid-template-areas: "head" "label";
 			grid-template-rows: 100px 1fr;
-			background-image: url(img/bg/bg1.jpg);
+			background-image: url(img/bg/bg5.jpg);
 			background-size: cover;
 			background-position: center center;
 			background-repeat: no-repeat;  
+			filter: brightness(1);
 			margin-bottom: 90px; 	
+
 		}
 
 		.cont-head,.cont-review,.cont-label,.cont-about, .cont-need{
@@ -95,7 +98,13 @@
 		.icn{
 			text-align: center;
 		}
-
+		.i-phone img{
+			height: 15px;
+			background-color: #76BF8A;
+			padding:10px;
+			border-radius: 50px;
+			margin-right: 15px;
+		}
 		.icn img,
 		.soc-icon img{
 			height: 35px;
@@ -104,12 +113,12 @@
 			padding:3px;
 			border-radius: 50px;
 			margin: 5px;
-			filter: brightness(85%);
+			filter: brightness(110%);
 		}
 		.icn img:hover,
 		.soc-icon img:hover{	
 			cursor: pointer;
-			filter: brightness(110%);
+			filter: brightness(90%);
 		}
 		.icn img:active,
 		.soc-icon img:active{	
@@ -167,12 +176,12 @@
 		.n-title{
 			color:#1E1E1E;
 			padding: 15px;
-			font-size: 22px;
+			font-size: 1.375em;
 		}
 		.disc-box{
 			color:#1E1E1E;
-			font-size: 15px;
-			max-width: 250px;	
+			font-size: 17px;
+			max-width: 280px;	
 			margin: 0 auto;
 		}
 		#bneed{
@@ -187,6 +196,7 @@
 		.need-item{
 			margin: 0 auto; line-height:1.3;color:rgb(60, 62, 63); 
 			font-family: 'PT Sans', sans-serif;
+			font-size: 
 		}
 		.butclass{
 			padding-left: 65px;
@@ -222,6 +232,7 @@
 				max-width: 590px;
 			}	
 		}
+
 
 		.review-box{
 			margin: 0 auto;
@@ -305,6 +316,7 @@
 		.nick-name{
 			font-weight: bold;
 			text-align: center;
+			font-size: 0.8em;
 		}
 		.cont-footer{
 			height: 550px;	
@@ -357,7 +369,28 @@
 		#gallery{
 			margin: 0 auto;text-align: center;
 		}
-		
+		.logo{
+			position: relative;
+			top:-8px;
+			display: flex;
+			align-items: center;	
+		}
+		.numb{
+			
+		}
+		@media (max-width: 500px){
+			.need-box{
+				display: block;
+
+			}
+			.need-item{
+				margin-top:30px;
+			}
+		}
+		.label-border{
+
+			
+		}
 	</style>
 	
 <body>
@@ -365,10 +398,11 @@
 
 		<div class="cont-head">
 			<div class="head">
-				<div class="logo" style="width: 124px; height: 28px; padding-top:15px; cursor: pointer; color: white">
-					<span style="">
-						logo
-					</span>
+				<div class="logo" style=" padding-top:15px; cursor: pointer; color: white">
+					
+						<div class="i-phone"><img src="img/icons/phone.png"></div>
+						<div class="numb"><b>+7(927)-570-62-23</b></div>
+					
 				</div>
 			<div class="icn"style="text-align: right;">
 				<!-- <input type="button" class="but" id="hbut" style="
@@ -381,25 +415,26 @@
 				<a target="_blank" href="https://vk.com/starovolzhsky_guesthouse"><img src="img/icons/soc/vk.png" href=></a>
 
 				<a target="_blank" href="https://www.instagram.com/starovolzhsky_guesthouse/"><img src="img/icons/soc/inst.png"></a>
-				<a  target="_blank" href="#"><img src="img/icons/soc/fb.png"></a>
+				<a  target="_blank" href="https://www.rusfishing.ru/forum/threads/gostevoj-dom-starovolzhskij.322877/page-28"><img src="img/icons/soc/fshng.png"></a>
 
 				
 			<!-- 	<img src="img/icons/fb.png"> -->
 			</div>
 			</div>
-			<div class="label" style="padding-bottom: 350px;padding-top: 100px;">
+			<div class="label" style="padding-bottom: 350px;padding-top: 200px;">
 			
-			<div class="label-border" >
+			<div class="label-border" style="word-wrap: break-word padding-top: 100px;
+			padding-bottom: 100px; ">
 				<div class="border-box">
 					<img  style="width: 20%;" src="img/house/roof.png">
 				</div>
 				<div class="splash" style=""><img src="img/house/splash.png" style="width: 32%; height: 1%;"></div>
 
 				<div style="font-size: 64px; color: white;  margin-left: 30px;margin-right: 40px; font-weight: bold;text-align: center; ">
-					Время, проведенное на рыбалке, в счет жизни не идет.
+					«Староволжский» гостевой дом
 				</div>
 
-				<div style="padding:100px;" class="border-but">
+				<div style="margin-top:90px;" class="border-but">
 
 <!-- 
 						<input type="button" class="but scroll" id="lbut"style="width: 192px; height: 48px;font-size: 20px; 
@@ -474,10 +509,11 @@
 				<p>
 				Если надоедает ленивая рыбалка (видел и таких) – можно арендовать весельную <b>лодку</b>, можно с мотором. Для самых упертых – <b>егерьская</b> рыбалка.</p>
 				<p>
-				Если не брать во внимание флот – <b>Вы</b> платите 1 раз за проживание. Странно видеть знакомые бударки со знакомых баз, которые встают с гостями неподалеку для ловли воблы. Странно звучит «Экскурсии на лотосные  поля» - тут куда ни плюнь, <b>попадешь в лотос.</b></p>
+				Если не брать во внимание флот – <b>Вы</b> платите 1 раз за проживание. Странно звучит «Экскурсии на лотосные  поля» - тут куда ни плюнь, <b>попадешь в лотос.</b></p>
 				<div style="padding-top: 40px; text-align: center;">
 					•••
 				</div>
+				
 				<img src="img/pirs.jpg" style="display: block;
 				max-width: 100%;
 				height: auto;">
@@ -485,17 +521,17 @@
 		</div>
 
 		<div class="cont-review"style=" color:#1E1E1E;">
-			<div class="review">
+			<div class="review" style=" font-size: 150%;">
 
-				<h1 style="font-size: 48px;text-align:center; padding-top:50px;
+				<h1 style="text-align:center; padding-top:50px;
 				max-width: 800px; margin: 0 auto;text-align: center; border-top:1px solid #D7D5D5;"> А что думают наши клиенты?</h1>
-				<h3 style="text-align: center;">Отзывы клиентов - это наша гарантия качества и надёжности. </h3>
+				<h3 style="text-align: center;font-size: 20px;">Отзывы клиентов - это наша гарантия качества и надёжности. </h3>
 
 				<div class="rev-slider">
 					<div class="review-box box3" >
 						<div class="rw-avatar">
 							<img src="img/reviews/man-3.png">
-							<div class="nick-name "style="color: #494846;">
+							<div class="nick-name "style="color: #494846; ">
 								Bofa
 							</div>
 						</div>
@@ -618,18 +654,18 @@
 
 		<div class="cont-shab" style="" >
 			<div class="shab-title" style="max-width: 800px; margin: 0 auto;text-align: center;">
-				<h1 style="font-size: 48px; color:#1E1E1E; padding-top: 50px;">Окунитесь в атмосферу рыбалки</h1>
-				<h3 style="color:#1E1E1E; max-width: 600px;margin:0 auto; text-align: center; padding-bottom:30px;">Фотографии являются нашей историей и памятью.</h3>
+				<h1 style="font-size: 3em; color:#1E1E1E; padding-top: 50px;">Окунитесь в атмосферу рыбалки</h1>
+				<h3 style="color:#1E1E1E;font-size: 20px;margin:0 auto; text-align: center; padding-bottom:30px;">Фотографии являются нашей историей и памятью.</h3>
 			</div>
 
 			<div class="gal-block"> 
  
-						<div  class="vk"  style=" padding-bottom:150px;" data-link="https://m.vk.com/album511145124_262033681"  data-limit="6" data-width="150">
+						<div  class="vk"  style=" padding-bottom:150px;" data-link="https://m.vk.com/album492237896_265237766"  data-limit="6" data-width="150">
 						</div>
 
 						
 			</div>	
-			<div style="margin: 50px auto; text-align: center; max-width: 230px; ">
+			<div style="margin: 100px auto; text-align: center; max-width: 230px; ">
 				<input type="button"onclick="location.href = 'gallery.html' " class="but" id="bneed" style="width: 230px; height: 43px;font-size: 18px; 
 						border-radius:30px;" value="Посмотреть больше">
 			</div>	
@@ -652,7 +688,7 @@
 				<div class="soc-icon">
 					<a target="_blank" href="https://vk.com/starovolzhsky_guesthouse"><img src="img/icons/soc/vk.png" href=></a>
 					<a target="_blank" href="https://www.instagram.com/starovolzhsky_guesthouse/"><img src="img/icons/soc/inst.png"></a>
-					<a  target="_blank" href="#"><img src="img/icons/soc/fb.png"></a>
+					<a  target="_blank" href="https://www.rusfishing.ru/forum/threads/gostevoj-dom-starovolzhskij.322877/page-28"><img src="img/icons/soc/fshng.png"></a>
 				</div>
 				</div>
 				

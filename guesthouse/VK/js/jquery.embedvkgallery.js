@@ -47,8 +47,8 @@
                     if (!res || res.length < 3) {return;}
 
                 $loader_blinding_block = $('<span/>', {text: '...'});
-                $loader_block = $('<div/>', {
-                    text: 'Загрузка фотографий, пожалуйста подождите ',
+                $loader_block = $('<div />', {
+                    text: '',
                     style: 'text-align: center; padding: 20px 20px;',
                     'class': 'jquery-embedvkgallery-loader-block'
                 });
@@ -73,7 +73,7 @@
                 meta_opts.height = meta_opts.width - (meta_opts.width / 2 ^ 0);
 
                 function resize($img) {
-                    var $div = $img.closest('div'),
+                    var $div = $img.closest('div '),
                         d_h = $div.height(),
                         d_w = $div.width(),
                         i_h = $img.height(),
@@ -118,11 +118,12 @@
                 }
 
                 function expanding($row) {
-                    var $divs = $('div', $row),
+                    var $divs = $("div", $row),
                         totalWidth = $divs.length * meta_opts.margin,
                         diff,
                         newWidth,
                         newHeight;
+
                     $divs.each(function() {
                         totalWidth += $(this).data('newWidth');
                     });
